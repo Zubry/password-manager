@@ -2,7 +2,9 @@
   "name": "password-manager",
   "private": true,
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "js-sha256": "^0.3.2"
+  },
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^3.2.0"

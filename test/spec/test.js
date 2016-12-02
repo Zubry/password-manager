@@ -1,10 +1,10 @@
 (function () {
   'use strict';
 
-  describe('Give it some context', function () {
-    describe('maybe a bit more context here', function () {
-      it('should run here few assertions', function () {
-
+  describe('PBKDF2', function () {
+    describe('Password-based key derivation', function () {
+      it('should generate matching passwords', function () {
+        assert(generatePassword('s33krit', 'nacl') === generatePassword('s33krit', 'nacl'));
       });
     });
   });

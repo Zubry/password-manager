@@ -32,6 +32,8 @@
         "https://*/*"
       ],
       "js": [
+				"bower_components/js-sha256/src/sha256.js",
+        "scripts/pbkdf2.js",
         "scripts/contentscript.js"
       ],
       "run_at": "document_end",

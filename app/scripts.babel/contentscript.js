@@ -1,3 +1,3 @@
 'use strict';
 
-console.log('\'Allo \'Allo! Content script');
+console.log(generatePassword('s33krit', 'nacl') === generatePassword('s33krit', 'nacl'));
