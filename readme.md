@@ -16,7 +16,7 @@ Create a new file under app/scripts.babel for each algorithm you implement. We'l
 ## Todo list
 
 * Generate a random 256-bit key (https://en.wikipedia.org/wiki/Pseudorandom_number_generator)
-* ~Take the master password and run it through PBKDF2 along with a 64-bit salt and get a 128-bit key. This is your secondary encryption key.~
+* ~~Take the master password and run it through PBKDF2 along with a 64-bit salt and get a 128-bit key. This is your secondary encryption key.~~
 * Use the secondary encryption key to encrypt the master encryption key using AES in the EAX mode and store it somewhere.
 For the database, use any format you want. As I'm not sure which one to choose, I'll say XML. Encrypt the database using the master encryption key.
 * When the user wants to access database you load the encrypted file in the memory, take the master password and run it through PBKDF2 with salt and get the secondary key, use the secondary key to decrypt the master key, and finally use the master key to decrypt the database.

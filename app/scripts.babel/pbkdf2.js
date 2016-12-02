@@ -26,6 +26,16 @@ function xor(a, b) {
   return c;
 }
 
+function toBigInteger(str) {
+  let out = '';
+
+  for (let i = 0; i < str.length; i++) {
+    out += str.charCodeAt(i).toString(16);
+  }
+
+  return BigInteger.parse(out, 16);
+}
+
 function PBKDF2(prf, password, salt, c, dkLen) {
   const hashLength = prf('').length;
   const blockLength = Math.ceil(dkLen / hashLength);
@@ -47,5 +57,5 @@ function PBKDF2(prf, password, salt, c, dkLen) {
     output += xorsum;
   }
 
-  return output;
+  return toBigInteger(output);
 }

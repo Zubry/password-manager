@@ -3,7 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "dependencies": {
-    "js-sha256": "^0.3.2"
+    "js-sha256": "^0.3.2",
+    "javascript-biginteger": "*"
   },
   "devDependencies": {
     "chai": "^3.5.0",

@@ -32,7 +32,9 @@
         "https://*/*"
       ],
       "js": [
+				"bower_components/javascript-biginteger/biginteger.js",
 				"bower_components/js-sha256/src/sha256.js",
+        "scripts/prng.js",
         "scripts/pbkdf2.js",
         "scripts/contentscript.js"
       ],

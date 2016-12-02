@@ -1,3 +1,4 @@
 'use strict';
 
-console.log(generatePassword('s33krit', 'nacl') === generatePassword('s33krit', 'nacl'));
+console.log(generateRandomBits(128), generateRandomBits(128).toString(16));
+console.log(generatePassword('s33krit', 'nacl'));
