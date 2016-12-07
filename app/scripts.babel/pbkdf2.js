@@ -9,7 +9,15 @@
 // Side note: We include sha-256 as a dependency. We did not write it because it is a hash function and outside the scope of this course
 
 function generatePassword(master, salt) {
-  return PBKDF2(sha256, master, salt, 10000, 128);
+  return aesjs.util.convertStringToBytes(PBKDF2(sha256, master, salt, 10000, 8).slice(32, 64));
+}
+
+function hexToString(hex) {
+  let buffer = '';
+  for (let i = 0; i < hex.length; i += 2) {
+    buffer += String.fromCharCode(parseInt(hex.slice(i, i + 2), 16));
+  }
+  return buffer;
 }
 
 function toUint(n) {
@@ -33,7 +41,7 @@ function toBigInteger(str) {
     out += str.charCodeAt(i).toString(16);
   }
 
-  return BigInteger.parse(out, 16);
+  return out;
 }
 
 function PBKDF2(prf, password, salt, c, dkLen) {
@@ -57,5 +65,6 @@ function PBKDF2(prf, password, salt, c, dkLen) {
     output += xorsum;
   }
 
-  return toBigInteger(output);
+  return output;
+  // return toBigInteger(output);
 }
